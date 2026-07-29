@@ -4,16 +4,19 @@ An end-to-end Machine Learning and Deep Learning pipeline built to classify loan
 
 ---
 
-## 📊 Overview & Key Highlights
+## 📊 Overview & Performance Benchmark
 
 This project implements a complete binary classification workflow using both classic machine learning models and a custom Deep Neural Network (Keras/TensorFlow).
 
-### 🏆 Models Evaluated
-- **Logistic Regression** (Linear baseline)
-- **Random Forest Classifier** (Ensemble baseline & tuned via GridSearchCV)
-- **Gradient Boosting Classifier** (Advanced ensemble)
-- **Support Vector Machine (SVM)** (Kernel-based classifier)
-- **Deep Neural Network (Keras)** (Multi-layer Perceptron with Batch Normalization & Dropout)
+### 🏆 Model Comparison Results
+
+| Model | Accuracy | Precision | Recall | F1-Score | ROC-AUC |
+|---|---|---|---|---|---|
+| **Logistic Regression** | **85.37%** | 83.17% | **98.82%** | **0.9032** | 0.8207 |
+| **Random Forest** | **85.37%** | **85.26%** | 95.29% | 0.9000 | **0.8452** |
+| **SVM (RBF Kernel)** | **85.37%** | 83.17% | **98.82%** | **0.9032** | 0.8015 |
+| **Neural Network (Keras)** | 84.55% | 82.35% | **98.82%** | 0.8984 | 0.7288 |
+| **Gradient Boosting** | 78.86% | 83.91% | 85.88% | 0.8488 | 0.7440 |
 
 ---
 
@@ -56,17 +59,6 @@ Output Layer (1 unit, Sigmoid)
 - **Callbacks**:
   - `EarlyStopping` (patience = 15, restore best weights)
   - `ReduceLROnPlateau` (factor = 0.5, patience = 5)
-
----
-
-## 📈 Evaluation Metrics
-
-All models are evaluated and ranked based on:
-- **Accuracy**
-- **Precision**
-- **Recall**
-- **F1-Score**
-- **ROC-AUC Score**
 
 ---
 
